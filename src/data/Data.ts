@@ -11,6 +11,7 @@ interface User {
     projects: Project[]
     experience: Experience[]
     contact_links: ContactLink[]
+    certifications?: Certification[] // <-- Add this line
 }
 
 interface Organization {
@@ -65,80 +66,159 @@ interface ContactLink {
     icon: string
 }
 
+interface Certification {
+    name: string
+    authority: string
+    logo: string
+    href: string
+    date: string
+    credential?: string // Optional: certificate URL or ID
+}
+
 let baseIconsURL = 'https://cdn.simpleicons.org';
 
 
 export let user: User = {
-    name: "Aunali K.",
-    nameWithoutSuffix: "Aunali",
-    role: "Technologist with a passion for building.",
-    nickname: "Cossale",
-    ed: "Computer Science Student",
-    about: "A 21-year-old developer from India with a passion for AI/ML, product development, and open source. My expertise spans machine learning, natural language processing, and building AI solutions. I'm constantly exploring new technologies and methodologies in the rapidly evolving field of AI, with a keen interest in developing products that solve real-world problems. Beyond AI, I enjoy reverse engineering, web scraping, scripting, and gaming.",
+    name: "Chetan S.",
+    nameWithoutSuffix: "Chetan Solanki",
+    role: "Cloud & DevOps Engineer | CI/CD, Automation & Beyond | If it’s repetitive, it’s scriptable.",
+    nickname: "CS",
+    ed: "Cloud Devops Engineer",
+    about: "2+ years in AWS systems and automating deployments at scale. Transform manual workflows into self-healing infrastructure—currently managing 500+ servers across 50+ client environments while optimizing performance, security, and cost.",
     orgs: [
         {
-            name: "New Media Services",
-            role: "AI/ML Engineer",
-            logo: "https://scontent.famd18-1.fna.fbcdn.net/v/t39.30808-6/381142632_692704966211337_3709953787732150214_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=avsnKlwwuMUQ7kNvgEC2csT&_nc_oc=AdhiBz-8qPy2MMzh4dzCGonMY7Z6KkLOXi4FJeGPF_Djn-38Q2fU1AhKaghtwvSFLCg&_nc_zt=23&_nc_ht=scontent.famd18-1.fna&_nc_gid=A7yMrFkHjPM8zKL-le6Hn1b&oh=00_AYDoN4E-Z75C8BLT8XgNdqMtvPrRPV2bhAg19OOwJIT_BA&oe=67B14E2C",
-            href: "https://newmediaservices.com.au"
+            name: "VIP",
+            role: "Cloud Devops Engineer",
+            logo: "https://images.squarespace-cdn.com/content/v1/648cac8ea29e3c00fd9811ee/00b331b3-17cd-4511-9e5e-cbbb4577a0e1/VIP-logo-blue.png?format=1500w",
+            href: "https://public.vtinfo.com/"
         },
         {
-            name: "ReVanced",
-            role: "Core team member",
-            logo: "https://avatars.githubusercontent.com/u/101597779?s=200&v=4",
-            href: "https://revanced.app"
+            name: "AWS",
+            role: "Trainee Devops Engineer",
+            logo: "https://th.bing.com/th/id/OIP.psHTljeUmjcPjpOqtgp0HwHaEb?w=286&h=180&c=7&r=0&o=5&pid=1.7",
+            href: "https://aws.amazon.com/"
+        },
+        {
+            name: "LTIMindtree",
+            role: "Devops Intern",
+            logo: "https://th.bing.com/th/id/OIP.Q-QD8zQwmwkJYZ1WWXu_tAHaBa?w=332&h=67&c=7&r=0&o=5&pid=1.7",
+            href: "https://www.ltimindtree.com/"
         }
     ],
     education: [
         {
-            name: "Master of Computer Applications",
+            name: "Bachelor of Engineering in Information Technology (BEIT) (9 CGPA)",
             href: "https:/vidhyanagari.org/",
-            school: "Vidhyanagari Group of Institutions",
-            timespan: "July 2024 - Present"
+            school: "Shree L.R. Tiwari College of Engineering",
+            timespan: "June 2020 - May 2023"
         },
         {
-            name: "Bachelor of Computer Applications",
+            name: "Diploma in Information Technology (89%)",
             href: "https://maktabahjafariyah.org/",
-            school: "Maktabah Jafariyah Knowledge & Research Academy",
-            timespan: "September 2021 - March 2024"
+            school: "Thakur polytechnic",
+            timespan: "June 2018 - May 2020"
         }
     ],
-    skills: [
+    certifications: [
         {
-            name: 'Python',
-            icon: `${baseIconsURL}/python`,
-            site: 'https://python.org'
+            name: "AWS Certified Solutions Architect",
+            authority: "Amazon Web Services",
+            logo: "https://media.licdn.com/dms/image/v2/D4E0BAQE0fp2sCqnVLg/company-logo_100_100/company-logo_100_100/0/1738855736997/amazon_web_services_logo?e=1753920000&v=beta&t=4KiP83VrTst7My0njbum7Q502qv9L8fQZFNMh5y7y8U",
+            href: "https://www.credly.com/badges/fbfbc235-a4e4-4f8f-afa1-6e5817c90f7c/public_url",
+            date: "October 2023",
         },
         {
-            name: 'PyTorch',
-            icon: `${baseIconsURL}/pytorch`,
-            site: 'https://pytorch.org'
+            name: "Amazon Web Services Cloud Practitioner",
+            authority: "Amazon Web Services",
+            logo: "https://media.licdn.com/dms/image/v2/D4E0BAQE0fp2sCqnVLg/company-logo_100_100/company-logo_100_100/0/1738855736997/amazon_web_services_logo?e=1753920000&v=beta&t=4KiP83VrTst7My0njbum7Q502qv9L8fQZFNMh5y7y8U",
+            href: "https://www.credly.com/badges/f747a345-0c10-4ab4-9873-349f1a13ca61/public_url",
+            date: "July 2022"
         },
         {
-            name: 'Jupyter',
-            icon: `${baseIconsURL}/jupyter`,
-            site: 'https://jupyter.org'
+            name: "Microsoft Certified: Azure Fundamentals",
+            authority: "Microsoft",
+            logo: "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753920000&v=beta&t=ChsEDHgJwp0H6KRiYreYON89ZaIeznxd1jkF-K3NoxU",
+            href: "https://www.credly.com/badges/971b4308-dea1-4f88-9e9b-2a3d6f7f28ca",
+            date: "June 2023",
         },
         {
-            name: 'Unsloth',
-            icon: `https://cdn-avatars.huggingface.co/v1/production/uploads/62ecdc18b72a69615d6bd857/E4lkPz1TZNLzIFr_dR273.png`,
-            site: 'https://unsloth.ai'
+            name: "Microsoft Certified: Azure AI Fundamentals",
+            authority: "Microsoft",
+            logo: "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753920000&v=beta&t=ChsEDHgJwp0H6KRiYreYON89ZaIeznxd1jkF-K3NoxU",
+            href: "https://www.credly.com/badges/72d2f0dc-b46a-4456-b127-72b118b5d6db",
+            date: "June 2023",
         },
         {
-            name: 'Huggingface',
-            icon: `${baseIconsURL}/huggingface`,
-            site: 'https://huggingface.co'
-        },
-        {
-            name: 'Svelte',
-            icon: `${baseIconsURL}/svelte`,
-            site: 'https://svelte.dev'
-        },
-        {
-            name: 'Javascript',
-            icon: `${baseIconsURL}/javascript`,
-            site: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+            name: "Microsoft Certified: Azure Data Fundamentals",
+            authority: "Microsoft",
+            logo: "https://media.licdn.com/dms/image/v2/D560BAQH32RJQCl3dDQ/company-logo_100_100/B56ZYQ0mrGGoAU-/0/1744038948046/microsoft_logo?e=1753920000&v=beta&t=ChsEDHgJwp0H6KRiYreYON89ZaIeznxd1jkF-K3NoxU",
+            href: "https://www.credly.com/badges/6e84bf39-456c-460e-a27c-7452da5e5de2/public_url",
+            date: "July 2023",
         }
+        // Add more certifications as needed
+    ],
+  skills: [
+    // Cloud & DevOps
+    {
+      name: "AWS",
+      icon: `${baseIconsURL}/amazon`,
+      site: "https://aws.amazon.com"
+    },
+    {
+      name: "Terraform",
+      icon: `${baseIconsURL}/terraform`,
+      site: "https://terraform.io"
+    },
+    {
+      name: "Kubernetes",
+      icon: `${baseIconsURL}/kubernetes`,
+      site: "https://kubernetes.io"
+    },
+    {
+      name: "GitHub Actions",
+      icon: `${baseIconsURL}/github`,
+      site: "https://github.com/features/actions"
+    },
+    {
+      name: "ArgoCD",
+      icon: "https://argo-cd.readthedocs.io/en/stable/assets/logo.png",
+      site: "https://argoproj.github.io"
+    },
+    {
+      name: "Python",
+      icon: `${baseIconsURL}/python`,
+      site: "https://python.org"
+    },
+    {
+      name: "Jenkins",
+      icon: `${baseIconsURL}/jenkins`,
+      site: "https://www.jenkins.io"
+    },
+    {
+      name: "Docker",
+      icon: `${baseIconsURL}/docker`,
+      site: "https://www.docker.com"
+    },
+    {
+      name: "Ansible",
+      icon: `${baseIconsURL}/ansible`,
+      site: "https://www.ansible.com"
+    },
+    {
+      name: "Linux",
+      icon: `${baseIconsURL}/linux`,
+      site: "https://www.linux.org"
+    },
+    {
+      name: "Jira",
+      icon: `${baseIconsURL}/jira`,
+      site: "https://www.atlassian.com/software/jira"
+    },
+    {
+      name: "YAML",
+      icon: `${baseIconsURL}/yaml`,
+      site: "https://yaml.org"
+    }
     ],
     projects: [
         {
@@ -184,83 +264,74 @@ export let user: User = {
     ],
     experience: [
         {
-            role: "AI/ML Engineer · New Media Services (Formerly InvestBrains)",
-            href: "https://newmediaservices.com.au/",
-            timespan: "June 2024 - Present",
-            external_links: [
-                {
-                    url: 'https://newmediaservices.com.au',
-                    label: 'Website'
-                },
-            ],
-            description: `
-            • <strong>Content Moderation Leadership:</strong> Led the development and deployment of advanced moderation solutions, utilizing vision models to create and maintain a robust Moderation API. This initiative proactively addressed harmful content across platforms, ensuring user safety and responsible AI application. <br><br>
-            • <strong>Large Language Model (LLM) Optimization & Fine-tuning:</strong> Specialized in fine-tuning and optimizing LLMs for diverse applications, including creating engaging role-play scenarios and developing effective question-answering systems. Work focused on significantly improving model performance and accuracy for specific use cases relevant to content generation and user interaction. <br><br>
-            • <strong>Reinforcement Learning for Model Alignment:</strong> Implemented Reinforcement Learning techniques, including Direct Preference Optimization (DPO), to refine LLM outputs and align them with user preferences. This resulted in enhanced output quality, improved user satisfaction, and AI-driven experiences more closely aligned with user expectations. <br><br>
-            • <strong>Generative AI & Diffusion Models:</strong> Pioneered the application of diffusion models, particularly Stable Diffusion, for custom image generation tasks. This involved fine-tuning models, creating specialized image generation solutions, and curating datasets to support diverse image generation needs, expanding the company's generative AI capabilities. <br><br>
-            • <strong>Automation & Infrastructure Development:</strong> Developed and maintained critical automation scripts to streamline AI development workflows. This included automation for LLM hosting, comprehensive benchmarking processes, and synthetic data generation, significantly improving team efficiency and development lifecycle management. <br><br>
-            • <strong>Text-to-Speech (TTS) Innovation:</strong> Designed and implemented a Text-to-Speech (TTS) system for dialog applications, incorporating voice cloning technology and leveraging FastAPI for efficient deployment and scalability. <br><br>
-            `,
-            tags: ['Python', 'PyTorch', 'HF Transformers/Diffusers/Datasets', 'Axolotl', 'Unsloth', 'TRL'],
-        },
+    role: "Cloud DevOps Engineer · Vermont Information Processing (VIP)",
+    href: "https://public.vtinfo.com/",
+    timespan: "June 2023 - Present",
+    external_links: [
         {
-            role: "Core Software Developer · ReVanced",
-            href: "https://revanced.app",
-            timespan: "May 2022 - July 2024",
-            external_links: [
-                {
-                    url: 'https://revanced.app',
-                    label: 'Website'
-                },
-                {
-                    label: 'GitHub',
-                    url: 'https://github.com/revanced'
-                }
-            ],
-            description: `• Worked with a globally distributed team of 15 developers to build ReVanced, an open-source Android modification framework empowering users to customize apps to suit their needs. <br > <br >
-                    • I helped spearhead overall architecture, design, and roadmapping - devising an  adaptable core to enable endless customizations for apps built on Dalvik like YouTube. I also directly contributed extensive code across the codebase. <br > <br >
-                    • I led development of the ReVanced Manager app installed by over 170K users. The app streamlined installations and made core functionality easily accessible. <br > <br >
-                    • Initially adopted by a few hundred users, ReVanced gathered incredible traction on platforms like Reddit, Discord and Telegram from folks who really liked what we built. <br > <br >
-                    • As installs grew exponentially to 170,000+, I took on expanded duties - overseeing roadmap priorities, debugging complex issues, liaising with user communities, and ensuring stability through rigorous testing. <br > <br >
-                    • The project gave me hands-on experience on how coordinated remote teams can build delightful products loved by users globally. Debugging performance problems taught me how to approach issues methodically. Ultimately, the ability to solve real user problems at scale was extremely fulfilling.`,
-            tags: ['Flutter', 'Dart', 'Kotlin', 'JADX'],
+            url: 'https://public.vtinfo.com',
+            label: 'Website'
+        },
+    ],
+    description: `
+    • <strong>Cloud Infrastructure Management:</strong> Managed 500+ Ubuntu EC2 instances across 50+ client environments, ensuring high availability and performance for insurance processing systems. <br><br>
+    • <strong>Containerization & Migration:</strong> Spearheaded migration from Chef to Docker, orchestrating containerized services (Apache, Tomcat, MySQL, SOLR) and optimizing deployment workflows. <br><br>
+    • <strong>AWS Automation & Tooling:</strong> Designed and deployed AWS resources (SQS, SNS, SES, NACLs) using Java SDK to enhance automation, scalability, and operational efficiency. <br><br>
+    • <strong>Disaster Recovery & Backups:</strong> Implemented robust backup solutions and tested failover strategies to minimize downtime and ensure business continuity. <br><br>
+    • <strong>Incident Management:</strong> Served in a 24/7 on-call rotation—resolving critical production issues, reducing downtime, and escalating complex cases as needed. <br><br>
+    • <strong>CI/CD & IaC Expertise:</strong> Built pipelines using AWS Code* services (Pipeline, Build, Deploy) and CloudFormation (SME), while optimizing containerized workloads on ECS/EKS. <br><br>
+    • <strong>Customer Advocacy:</strong> Acted as POC for AWS X-Ray escalations, providing advanced troubleshooting and architectural guidance to align solutions with AWS best practices. <br><br>
+    `,
+    tags: [
+        'AWS', 'Docker', 'ECS/EKS', 'CI/CD', 
+        'CloudFormation (SME)', 'Linux', 'Java SDK', 'Disaster Recovery'
+    ],
+},
+        {
+    role: "Trainee DevOps Engineer · AWS (Internship)",
+    href: "https://aws.amazon.com/",
+    timespan: "July 2022",
+    external_links: [
+        {
+            url: 'https://www.credly.com/badges/f747a345-0c10-4ab4-9873-349f1a13ca61/public_url',
+            label: 'Certificate'
         }
+    ],
+    description: `• Completed intensive 2-month AWS certification training program through Amazon's partnered university initiative, earning official AWS digital credentials. <br><br>
+    • Gained hands-on experience with core AWS services (EC2, S3, IAM, VPC) through guided labs and real-world scenario exercises. <br><br>
+    • Developed foundational DevOps skills including cloud infrastructure provisioning, security best practices, and CI/CD pipeline concepts. <br><br>
+    • Successfully implemented all coursework projects including deploying scalable web applications and configuring monitoring solutions. <br><br>
+    • This structured immersion into cloud technologies complemented my bachelor's degree in engineering and sparked my professional focus on DevOps.`,
+    tags: [
+        'AWS Fundamentals', 
+        'Cloud Computing', 
+        'EC2/S3', 
+        'IAM/VPC',
+        'CI/CD Concepts'
+    ],
+}
     ],
     contact_links: [
         {
             title: "Mail",
-            text: "hello@auna.li",
-            href: "mailto:hello@auna.li",
+            text: "chetanss912@gmail.com", // <-- Replace with your real email
+            href: "mailto:chetanss912@gmail.com",
             ctaText: "Contact",
             icon: "<svg class='h-11 w-11 text-gray-900 dark:text-gray-300' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2.5' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'> <path d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75' stroke-linecap='round' stroke-linejoin='round' /> </svg>"
         },
         {
-            title: "Discord",
-            text: "@cossale",
-            href: "https://discord.com/users/164673069212893184",
-            ctaText: "Message",
-            icon: "<i class='text-5xl fa-brands fa-discord text-gray-900 dark:text-gray-300' />"
-        },
-        // {
-        //     title: "Telegram",
-        //     text: "t.me/AunAli121",
-        //     href: "https://t.me/AunAli121",
-        //     ctaText: "Message",
-        //     icon: "<i class='text-5xl fa-brands fa-telegram text-gray-900 dark:text-gray-300' />"
-        // },
-        {
             title: "GitHub",
-            text: "github.com/Aunali321",
-            href: "https://github.com/Aunali321",
+            text: "Chetanssolanki", // <-- Replace with your GitHub username
+            href: "https://github.com/Chetanssolanki",
             ctaText: "Follow",
             icon: "<i class='text-5xl fa-brands fa-github text-gray-900 dark:text-gray-300' />"
         },
         {
-            title: "Twitter",
-            text: "@XCossale",
-            href: "https://x.com/cossale",
-            ctaText: "Follow",
-            icon: "<i class='text-5xl fa-brands fa-twitter text-gray-900 dark:text-gray-300' />"
+            title: "LinkedIN",
+            text: "chetan-singh-solanki", // <-- Replace with your Twitter/X handle
+            href: "https://www.linkedin.com/in/chetan-singh-solanki/",
+            ctaText: "Connect",
+            icon: "<i class='text-5xl fa-brands fa-linkedin text-gray-900 dark:text-gray-300' />"
         }
     ]
 

@@ -46,6 +46,53 @@
 	{/each}
 </Card>
 
+<!-- Certifications Card -->
+<Card class="mt-5 mx-auto md:mx-0">
+    <div class="heading flex">
+        <svg
+            class="w-6 h-6 mr-2 text-latte-blue dark:text-ctp-mauve"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-3A2.25 2.25 0 008.25 5.25V9m7.5 0v10.5A2.25 2.25 0 0113.5 21h-3A2.25 2.25 0 018.25 19.5V9m7.5 0h-7.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </svg>
+        <h3 class="tracking-tight font-semibold text-latte-blue dark:text-ctp-mauve">Certifications</h3>
+    </div>
+
+    <div class="items-center mt-5">
+        {#each user.certifications as cert}
+            <a
+                href={cert.href}
+                target="_blank"
+                class="flex items-center hover:bg-gray-100 dark:hover:bg-gray-700 p-3 rounded-md cursor-pointer hover:scale-[1.02] transition-transform ease-in-out duration-200"
+            >
+                <Img src={cert.logo} alt={cert.authority + ' logo'} class="w-10 h-10 mr-3 rounded-full dark:bg-gray-200" />
+                <div>
+                    <h4 class="text-base font-medium tracking-tight text-gray-900 dark:text-white">
+                        {cert.name}
+                    </h4>
+                    <p class="text-sm tracking-tight text-gray-700 dark:text-gray-300">
+                        {cert.authority} &middot; {cert.date}
+                    </p>
+                    {#if cert.credential}
+                        <p class="text-xs text-blue-600 dark:text-blue-400 break-all">
+                            Credential: {cert.credential}
+                        </p>
+                    {/if}
+                </div>
+            </a>
+        {/each}
+    </div>
+</Card>
+
 <!-- Education Card -->
 <Card class="mt-5 mx-auto md:mx-0">
 	<div class="heading flex">
