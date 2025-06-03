@@ -161,7 +161,7 @@ export let user: User = {
     // Cloud & DevOps
     {
       name: "AWS",
-      icon: `${baseIconsURL}/amazon`,
+      icon: "https://media.licdn.com/dms/image/v2/D4E0BAQE0fp2sCqnVLg/company-logo_100_100/company-logo_100_100/0/1738855736997/amazon_web_services_logo?e=1753920000&v=beta&t=4KiP83VrTst7My0njbum7Q502qv9L8fQZFNMh5y7y8U",
       site: "https://aws.amazon.com"
     },
     {
