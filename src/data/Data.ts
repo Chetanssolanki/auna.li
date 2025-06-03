@@ -220,48 +220,60 @@ export let user: User = {
       site: "https://yaml.org"
     }
     ],
-    projects: [
-        {
-            role: "Kepler Systems",
-            href: "https://kepler.systems",
-            timespan: "February 2025 - Present",
-            short_description: "Building the future of AI through shared datasets, and open-source models.",
-            external_links: [
-                {
-                    url: 'https://kepler.systems',
-                    label: 'Website'
-                },
-                {
-                    url: 'https://huggingface.co/keplersystems',
-                    label: 'Hugging Face'
-                },
-                {
-                    url: 'https://x.com/keplersystems',
-                    label: 'Twitter / X'
-                }
-            ],
-            tags: ["SvelteKit", "TailwindCSS"],
-            description: "Kepler Systems is to contribute to fundamental AI research and development across various domains. Current projects within Kepler Systems include:<br> <strong>Poetry-Llama</strong>: State-of-the-Art Urdu Poetry Model: Our most recent project is Poetry-Llama, a cutting-edge LLM specifically fine-tuned for understanding and generating Urdu poetry.This 70-billion parameter model is trained on a diverse corpus of Urdu poetry and is openly available under the Llama license on Hugging Face. <br><br> <strong>Open Datasets for Urdu Poetry Research</strong>: Recognizing the importance of quality data in AI research, Kepler Systems curates and shares valuable datasets: <br> <strong>UrduShers-10k</strong>: A meticulously curated collection of 10,000 classical Urdu poetry couplets(shers) from diverse poets and eras, ensuring high quality and cultural representation.This dataset is licensed under CC BY-SA 4.0 for open use in research and creative projects. <br><strong>UrduGhazals-25k</strong>: A comprehensive dataset featuring 25,000 complete Urdu ghazals, encompassing a wide range of poets, eras, and dialects.This resource is also released under the CC BY-SA 4.0 license to promote open access and collaboration.",
-        },
-        {
-            role: "ReVanced Manager",
-            href: "https://github.com/revanced/revanced-manager",
-            timespan: "July 2022 - Present",
-            short_description: "patch any Dalvik Android application.",
-            external_links: [
-                {
-                    url: 'https://github.com/revanced/revanced-patcher',
-                    label: 'revanced-patcher'
-                },
-                {
-                    url: 'https://github.com/revanced/revanced-manager',
-                    label: 'revanced-manager'
-                }
-            ],
-            tags: ["Flutter", "Dart", "Kotlin"],
-            description: "The ReVanced Manager is an Android application that allows you to modify any Dalvik Android application to add, remove and/or modify existing functionality. It dissassembles the APK locally on your device, makes the required changes using our in-house <a class='relative inline-flex items-center text-sm font-medium dark:text-mocha-lavender text-latte-lavender transition duration-100 hover:scale-[1.03] hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender' href='https://github.com/revanced/revanced-patcher'>patcher library</a> and then assembles it back into an APK again. You can find it on <a class='relative inline-flex items-center text-sm font-medium dark:text-mocha-lavender text-latte-lavender transition duration-100 hover:scale-[1.03] hover:text-latte-lavender dark:hover:text-mocha-lavender focus-visible:text-mocha-lavender' href='https://github.com/revanced/revanced-manager'>GitHub.</a>",
-        },
-    ],
+projects: [
+    {
+        role: "Cloud Infrastructure Automation · Vermont Information Processing (VIP)",
+        href: "https://public.vtinfo.com",
+        timespan: "June 2023 - Present",
+        short_description: "Automated AWS infrastructure for 50+ client environments (500+ servers) using IaC and CI/CD.",
+        external_links: [
+            {
+                url: 'https://public.vtinfo.com',
+                label: 'Website'
+            }
+        ],
+        tags: ["AWS", "Terraform", "Kubernetes", "CI/CD", "Docker"],
+        description: `
+        • <strong>AWS Infrastructure at Scale</strong>: Managed 500+ EC2 instances across multiple environments using Terraform and CloudFormation, reducing provisioning time by 70%. <br><br>
+        • <strong>CI/CD Pipeline Optimization</strong>: Built GitLab CI/CD pipelines for zero-downtime deployments, cutting release cycles from hours to minutes. <br><br>
+        • <strong>Containerization Initiative</strong>: Migrated legacy Chef-managed services to Docker/Kubernetes, improving resource utilization by 40%. <br><br>
+        • <strong>Disaster Recovery</strong>: Designed automated backup solutions for critical systems using AWS Backup and custom scripts.`,
+    },
+    {
+        role: "AWS Cloud Migration Project · Internship",
+        href: "https://aws.amazon.com",
+        timespan: "July 2022",
+        short_description: "Implemented AWS solutions during intensive 2-month cloud engineering internship.",
+        external_links: [
+            {
+                url: 'https://aws.amazon.com',
+                label: 'AWS'
+            }
+        ],
+        tags: ["AWS EC2/S3", "IAM", "VPC", "Cloud Security"],
+        description: `
+        • Deployed scalable web applications on AWS using EC2, S3, and RDS. <br><br>
+        • Configured IAM policies and VPC networking for secure multi-tier architectures. <br><br>
+        • Earned AWS Cloud Practitioner digital badge by completing all labs and assessments.`,
+    },
+    {
+        role: "Kubernetes Cluster Optimization · Personal Project",
+        href: "https://github.com/yourusername/k8s-optimization",
+        timespan: "2024",
+        short_description: "Cost-optimized EKS clusters using autoscaling and spot instances.",
+        external_links: [
+            {
+                url: 'https://github.com/yourusername/k8s-optimization',
+                label: 'GitHub'
+            }
+        ],
+        tags: ["AWS EKS", "Helm", "Prometheus", "Grafana"],
+        description: `
+        • Reduced Kubernetes cluster costs by 60% through spot instance integration and HPA tuning. <br><br>
+        • Implemented monitoring with Prometheus/Grafana for performance visibility. <br><br>
+        • Automated deployments using Helm charts and ArgoCD.`,
+    }
+],
     experience: [
         {
     role: "Cloud DevOps Engineer · Vermont Information Processing (VIP)",
